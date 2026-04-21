@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atomic Swap Interface</title>
+</head>
+<body>
+    <h1>Atomic Swap P2P</h1>
+    <div id="status">Connect Wallet to Start</div>
+    <button onclick="connect()">Connect Metamask</button>
+
+    <script type="module">
+        import { ethers } from "https://cdnjs.cloudflare.com/ajax/libs/ethers/6.10.0/ethers.min.js";
+        
+        window.connect = async () => {
+            if (window.ethereum) {
+                const provider = new ethers.BrowserProvider(window.ethereum);
+                await provider.send("eth_requestAccounts", []);
+                document.getElementById('status').innerText = "Wallet Connected";
+            }
+        };
+    </script>
+</body>
+</html>
