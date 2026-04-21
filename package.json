@@ -1,0 +1,9 @@
+{
+  "name": "atomic-swap-dex-lite",
+  "version": "1.0.0",
+  "description": "Cross-chain atomic swap logic in a flat structure",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "ethers": "^6.10.0"
+  }
+}
